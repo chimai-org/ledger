@@ -1,6 +1,8 @@
 # CORPUS
 
-Which sources may be read, where they live, and what you already know is missing from them. Thirty minutes, once.
+Which sources may be read, where they live, and what you already know is missing from them.
+
+**One source is a valid corpus.** If all you do is point at a single repository or one chat export, that is a real run, and the corpus note will say plainly what such a narrow view can and cannot support. Add sources when you want the findings to reach further.
 
 **Nothing is uploaded.** You are naming locations an agent already has access to on your own machine or in systems you already use. The engine reads them in place.
 
@@ -10,7 +12,7 @@ Which sources may be read, where they live, and what you already know is missing
 
 ## Where to look
 
-Most people underestimate how much record they already have. Work through this list and take the four or five richest sources rather than everything.
+Most people underestimate how much record they already have. Scan this list for what you happen to have, and take the richest one or two to begin with. Breadth can come later, and each source you add mainly buys reach into a domain the others cannot see.
 
 | Source | Where it usually lives | What it is good for |
 |---|---|---|
@@ -33,7 +35,8 @@ Most people underestimate how much record they already have. Work through this l
 
 ## Sources
 
-<!-- One block per source. Four or five good ones beat fifteen thin ones. -->
+<!-- One block per source. One good source beats five thin ones, and five good ones
+     beat fifteen. Start where the material actually is. -->
 
 ### <source name>
 

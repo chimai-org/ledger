@@ -1,6 +1,6 @@
 # SUBJECT
 
-Who or what is being read, and what the reader wants out of it. Fifteen minutes, once, and every future run reuses it.
+Who or what is being read, and what the reader wants out of it. Written once, reused by every later run. Two lines are enough to start.
 
 **Why this file changes the output more than any other.** The engine ranks findings by weight, and weight is consequence multiplied by confidence. Consequence is measured against *what the reader wants this for*, which is the sentence you write below. Change that sentence and a different ten come back from the same corpus. It is worth thinking about for a minute rather than filling in something plausible.
 

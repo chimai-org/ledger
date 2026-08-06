@@ -1,6 +1,6 @@
 # LEDGER · setup guide
 
-Budget an hour for the configuration, once, and only two of the three files need writing. The run itself takes longer and should.
+Two of the three configuration files need writing, once. The effort scales with how much record you point at, from a minute for a single repository upward. The run itself takes longer than the setup, and should.
 
 ---
 
@@ -53,7 +53,7 @@ Splitting the passes costs a little time and buys the two things that make the o
 
 ## 5. Read it properly once
 
-Set aside an hour and read it in one sitting, in order, without stopping to argue. Then go back to the top and argue.
+Read it in one sitting, in order, without stopping to argue. Then go back to the top and argue.
 
 Two things to check specifically, because they are where this genre fails:
 
