@@ -1,12 +1,12 @@
 # LEDGER configuration · template
 
-Copy this directory to `config/` and fill in the three files. Budget an hour, once.
+Copy this directory to `config/`. **Two files to fill in, one that already works.** Budget an hour, once.
 
 The engine (`../SKILL.md`) never contains your subject, your sources or your voice, and this directory never leaves your machine. That split is the design: you can pull engine updates forever without touching any of it, and contribute engine improvements without leaking it.
 
-- `subject.md` · who or what is being read, and which domains count
-- `corpus.md` · which sources may be read, where they are, what is known to be missing
-- `voice.md` · how the findings must read
+- `subject.md` · who or what is being read, and which domains count. **You write this.**
+- `corpus.md` · which sources may be read, where they are, what is known to be missing. **You write this.**
+- `voice.md` · how the findings must read. **Ships filled in and runs as it stands**, with runnable checks for the usual machine tells. Adjust the reading level to your taste, add your own rules over time.
 
 Pointers beat copies: if you already keep a style document or a data inventory, reference it here instead of duplicating it.
 

@@ -1,6 +1,6 @@
 # LEDGER · setup guide
 
-Budget an hour for the configuration, once. The run itself takes longer and should.
+Budget an hour for the configuration, once, and only two of the three files need writing. The run itself takes longer and should.
 
 ---
 
@@ -26,11 +26,13 @@ Write into `config/corpus.md`: where each source lives, roughly how far back it 
 
 **What to keep out.** Other people's private material, client-confidential content, anything under an obligation you would not want quoted back. If a source contains some of this, either exclude it or state the exclusion. An analysis that quietly reads privileged material is a liability, not a deeper reading.
 
-## 3. Set the voice
+## 3. Leave the voice alone, at least for the first run
 
-`config/voice.md` governs wording only. If you already keep a style document, point at it rather than copying it.
+`config/voice.md` is the one file you do not have to write. It ships filled in: a reading-level target for the actions, sentence rules, and runnable `grep` checks for the usual machine tells (em-dashes, the "not X, but Y" contrast, paired aphorisms, colon reveals, weasel attribution, hedging stacks, hype vocabulary). Copy it across and run.
 
-The two things worth specifying even if you keep nothing else: the constructions you never want to see, and the reading level you want the actions written at. The second one is easy to under-specify and it is the one that decides whether the document gets used. A good target is that a person could read an action at the end of a long day and know what to do tomorrow morning without re-reading it.
+Two things are worth adjusting once you have seen one output. The **reading level** is the setting that decides whether the document gets used at all, and it is yours to pitch. And the **your own additions** section at the bottom is where the file earns its keep over time: every correction you make by hand, dated, with the failing line attached, becomes a check the next run does not need you for.
+
+If you already keep a style document, point at it from the top of the file and treat the shipped rules as a starting set.
 
 The engine will not let a voice config make the output less honest, only blunter or softer in wording.
 

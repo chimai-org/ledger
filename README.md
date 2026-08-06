@@ -38,7 +38,7 @@ Whatever you already have, wherever it already is. Nothing gets uploaded and not
 
 Chat archives with an assistant. Commit history. CRM records. Meeting notes. Task systems. Strategy documents, goal files, invoices. Anything written for a purpose other than being analysed, carrying timestamps, recording what was actually done.
 
-Setup is one hour, once: three short files naming your subject, your sources and your wording rules. Then every future run reuses them.
+Setup is one hour, once: two short files naming your subject and your sources. The third, your wording rules, ships filled in and runs as it stands. Every future run reuses all three.
 
 ## What usually goes wrong
 
@@ -48,7 +48,7 @@ Prompts that analyse your history have circulated for a while. Run a few and the
 
 - **Your record never leaves your machine.** The agent reads sources in place. There is no upload step, no account, and no server holding your material.
 - **The engine is open source, MIT.** You can read every rule it follows, change any of them, and keep pulling improvements without touching your own setup.
-- **It is configured to you, not to a generic subject.** The engine ships empty. Your sources, your domains, your out-of-bounds topics and your wording rules live in three config files that stay yours and never get published.
+- **It is configured to you.** Your sources, your domains, your out-of-bounds topics and your wording rules live in three config files that stay on your machine and never get published. Two of them you write once. The third, the wording rules, ships with a working default so you can start the same afternoon.
 - **It reads a person or a company.** The same six steps work on a founder, a two-person team or a business unit. A company is usually the better corpus, because more of it is written down and it contradicts itself in writing.
 - **It finds what is working, not only what is broken.** Two of the twelve finding classes are the asset quietly compounding in your favour and the strength worth protecting rather than fixing.
 - **Every finding says how sure it is, and argues against itself.** Confidence is committed before the entry is written. Each finding carries the strongest case against it. A reading that cannot say how it might be wrong should not be trusted with a reading of your life or your company.
@@ -57,7 +57,7 @@ Prompts that analyse your history have circulated for a while. Run a few and the
 
 ## How to run it
 
-1. Copy [`config.template/`](config.template/) to `config/` and fill in the three files. One hour, once.
+1. Copy [`config.template/`](config.template/) to `config/`. Fill in `subject.md` and `corpus.md`; `voice.md` already works. One hour, once.
 2. Point your agent at [`SKILL.md`](SKILL.md) with `config/` next to it.
 3. Run the six steps as separate passes, never as one prompt. The gates between them are the method. [`GUIDE.md`](GUIDE.md) walks through it.
 4. Read the result in one sitting, then argue with it.
@@ -82,7 +82,7 @@ Full definitions with gates in [`SKILL.md`](SKILL.md).
 | File | What it is |
 |---|---|
 | [`SKILL.md`](SKILL.md) | The engine. Six steps as an agent-executable skill (Claude, Codex and compatible runtimes), versioned. Carries no subject and no house voice. |
-| [`config.template/`](config.template/) | The three files you fill in once: subject, corpus, voice. |
+| [`config.template/`](config.template/) | Your configuration: `subject.md` and `corpus.md` you write once, `voice.md` ships ready to use. |
 | [`GUIDE.md`](GUIDE.md) | Setup walkthrough, including how to prepare a large chat archive and how to run the steps as separate passes. |
 
 Where the engine and your voice config disagree on wording, your config wins. Where they disagree on honesty, the engine wins.

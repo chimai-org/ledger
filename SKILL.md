@@ -41,7 +41,7 @@ Resolve the configuration before running move L. Look for a `config/` directory 
 |---|---|---|
 | SUBJECT | `config/subject.md` | Who or what is being read: a person or an organisation. Which life or business domains count. What the reader wants this for. What is out of bounds. |
 | CORPUS | `config/corpus.md` | Which sources may be read, where they are, and their known blind spots. The access limits belong here, not in the output. |
-| VOICE | `config/voice.md` | How the findings must read. Banned constructions as runnable checks. May be a pointer to an existing style document. |
+| VOICE | `config/voice.md` | How the findings must read. Banned constructions as runnable checks. **Ships pre-filled with a working default**, so an adopter who writes nothing here still gets plain, checked prose. May also point at an existing style document. |
 
 Config files may be thin pointers to documents a team already keeps. Pointers beat copies: a copy drifts, a pointer stays true.
 
