@@ -4,95 +4,92 @@
 
 **Limit · Extract · Diagnose · Guide · Evidence · Reduce**
 
-A method for reading your own record back to yourself, honestly. Ten ranked findings: what is holding you back, and what is already working and worth protecting. The engine is open source; the record stays on your machine.
+Point an AI agent at the record you already have, and get back ten things worth knowing about yourself or your company, ranked, each with something you can do this week.
 
 ---
 
-## Why this exists
+## What you get
 
-You already have the evidence.
+One document, in this order.
 
-Somewhere on your machine there is a year of what you actually did. Not the version you would give in an interview. The real one: every question you asked at seven in the morning, every project you started and quietly dropped, every rule you wrote down for other people to follow, every time you broke it. Chat logs, commit histories, CRM records, meeting notes, task lists. Hundreds of thousands of words about a single person or a single company, written without any intention of being read as a whole.
+**A single page at the front.** The central tension, the strength available to meet it, where you are heading, and the one action that makes most of the others unnecessary. Written last, from what survived, so it reports the findings instead of announcing a thesis. If you read nothing else, you have the thing.
 
-Nobody reads it as a whole. Not you, because you were there and it feels like memory rather than data. Not your advisors, who get an hour and your own summary of the situation, which is exactly the account the record is most likely to contradict.
+**Ten findings, ranked by weight.** Weight is consequence multiplied by confidence: how much changes if this is true and you act, times how sure the evidence allows anyone to be. Heaviest first. A striking guess ranks below a plain fact.
 
-So the gap between what you believe about how you spend your time and what your calendar proves you did is not hidden anywhere. It is simply unread.
+**Each finding is four blocks, always in this order:**
 
-## What usually goes wrong when you try
+> `Confidence 8/10 · Evidence broad · Basis: four periods, three domains, one real counterexample`
+>
+> **The finding.** One sentence saying what is true, then about a hundred words making it concrete.
+>
+> **What to do.** One or two actions you can start this week, in plain sentences, with the sign that would tell you it is working.
+>
+> **Context.** Where this sits in the wider picture, and the strongest case against it.
+>
+> **Sources.** Dates, counts, your own words, the specific decisions. A list you can check.
 
-Prompts that ask a model to analyse your history have been circulating for a while. Run a few and the same four problems show up.
+**A corpus note** stating what was actually read, what was missing, and how many candidate findings were cut to reach ten.
 
-They flatter. A model that has read a year of your work has also learned to be agreeable about it, and agreeable analysis of your own life is worse than useless, because you will believe it.
+**A bias check and a counter-case**, where the analysis argues against itself.
 
-They bury the point. Three paragraphs of framing arrive before you learn what was found, and the thing you could actually do about it sits at the bottom, after the argument, where a tired reader never reaches it.
+## What you put in
 
-They give you twenty findings. Twenty findings feels thorough and behaves like noise. You act on two, and the two you pick are the comfortable ones.
+Whatever you already have, wherever it already is. Nothing gets uploaded and nothing gets copied to a server.
 
-They write the summary first. Which means the summary states a thesis and the findings are recruited to support it, instead of the summary being what survived the findings.
+Chat archives with an assistant. Commit history. CRM records. Meeting notes. Task systems. Strategy documents, goal files, invoices. Anything written for a purpose other than being analysed, carrying timestamps, recording what was actually done.
 
-## What LEDGER does differently
+Setup is one hour, once: three short files naming your subject, your sources and your wording rules. Then every future run reuses them.
 
-Four decisions, and they are the whole method.
+## What usually goes wrong
 
-**The boundary is declared before anything is read for meaning.** Real dates, real volume, which domains are absent, and which way the source is structurally biased. A chat archive over-represents deliberation and under-represents commitment, for everyone, in the same direction, because people bring open questions to an assistant and then go decide somewhere else. Naming that bias before you read is what stops "he circles without committing" from being manufactured out of a filing artifact.
+Prompts that analyse your history have circulated for a while. Run a few and the same four failures show up. They flatter, because a model that has read a year of your work has also learned to be agreeable about it. They bury the point under three paragraphs of framing, with the action at the bottom where a tired reader never reaches it. They hand you twenty findings, so you act on two and pick the comfortable ones. And they write the summary first, which means the evidence gets recruited to a thesis rather than producing one.
 
-**The answer comes before its justification.** Each finding opens with one sentence saying what is true, then a short paragraph making it concrete, then what to do about it this week. The context and the sources come afterwards, where they can be checked by the reader who wants to check and skipped by the reader who does not.
+## What makes this one different
 
-**Ten findings, ranked by weight.** Weight means consequence multiplied by confidence: how much changes if this is true and you act, times how sure the evidence lets anyone be. A brilliant observation at confidence 4 ranks below a plain one at confidence 9. The rest get cut, and the count of what was cut is reported, so ten never reads as everything there was.
+- **Your record never leaves your machine.** The agent reads sources in place. There is no upload step, no account, and no server holding your material.
+- **The engine is open source, MIT.** You can read every rule it follows, change any of them, and keep pulling improvements without touching your own setup.
+- **It is configured to you, not to a generic subject.** The engine ships empty. Your sources, your domains, your out-of-bounds topics and your wording rules live in three config files that stay yours and never get published.
+- **It reads a person or a company.** The same six steps work on a founder, a two-person team or a business unit. A company is usually the better corpus, because more of it is written down and it contradicts itself in writing.
+- **It finds what is working, not only what is broken.** Two of the twelve finding classes are the asset quietly compounding in your favour and the strength worth protecting rather than fixing.
+- **Every finding says how sure it is, and argues against itself.** Confidence is committed before the entry is written. Each finding carries the strongest case against it. A reading that cannot say how it might be wrong should not be trusted with a reading of your life or your company.
+- **No pathologising.** No clinical labels, about you or about anyone you mention, and a question you once asked is never treated as proof of something you did. This method diagnoses a situation, never a person. No configuration can switch that off.
+- **Ten, not everything.** The cut is the product. The document reports how many candidates were dropped, so ten never reads as all there was.
 
-**The one page is written last.** From the ten that survived, never drafted first and backfilled. It carries the central tension, the strength available to meet it, the direction of travel, and the single action that would make most of the others unnecessary.
+## How to run it
+
+1. Copy [`config.template/`](config.template/) to `config/` and fill in the three files. One hour, once.
+2. Point your agent at [`SKILL.md`](SKILL.md) with `config/` next to it.
+3. Run the six steps as separate passes, never as one prompt. The gates between them are the method. [`GUIDE.md`](GUIDE.md) walks through it.
+4. Read the result in one sitting, then argue with it.
+
+Twice a year for a person. For a company, run it just before the planning session, so it lands where decisions are made.
 
 ## The six steps
 
-Each has to be finished before the next may start. Full definitions with gates: [`SKILL.md`](SKILL.md).
+Full definitions with gates in [`SKILL.md`](SKILL.md).
 
-**Limit.** State what could actually be read and what could not, in real dates and real counts. Every later claim is capped by this. If the reach cannot be stated, the run stops here.
-
-**Extract.** Find five to eight threads that recur across more than one period and more than one domain, before answering anything. A pattern repeated forty times inside one conversation is still one episode. What someone repeatedly did outranks what they said about themselves.
-
-**Diagnose.** One finding per entry, in the first sentence. Specific enough to be impossible to paste into someone else's report, and falsifiable enough that some evidence could have contradicted it.
-
-**Guide.** One or two actions, startable this week, in sentences a tired person understands. Where the finding is a strength, the action is how to protect it, because a strength with nothing attached is a compliment.
-
-**Evidence.** Context, then the strongest case against the finding stated fairly, then the sources: dates, counts, exact quotes only where certain. Placed after the answer on purpose.
-
-**Reduce.** Rank, keep ten, then write the one page from what survived.
-
-## Where the weight comes from
-
-The hard part of a document like this is not finding something uncomfortable. Anything will feel uncomfortable if you write it sharply enough, and a model will happily generate discomfort on request.
-
-The hard part is being right, and then getting out of the way.
-
-A finding lands when it is a fact the reader cannot argue with, arranged next to another fact they had never put beside it. A rule someone wrote down in April, and the number of times the log shows them breaking it since. The channel every deal actually closed through, next to the channel that got the year's engineering. Two sentences from their own strategy document that cannot both be true.
-
-None of that needs adjectives. The method bans verdict language and drama vocabulary in the summary for exactly this reason. Dates, counts, their own words, in an order nobody has arranged before. That is where the effect comes from, and it is the reason accuracy is not a constraint on the impact but the source of it.
-
-## The honest price
-
-The output will sometimes be wrong, and it is built to tell you where. Every finding carries a confidence number committed to before the entry is written, the strongest counter-case stated fairly rather than as a token, and a standing bias check on the analysis itself. A reading that cannot say how it might be wrong should not be trusted with a reading of your life or your company.
-
-It also cuts things you wanted. Ten means ten, and something you would have found interesting will lose to something you will find useful.
-
-And it does not go looking for pathology. There are no clinical labels in the output, about you or about anyone you mention, and a question you once asked is never treated as proof of a thing you did. Curiosity is not conduct. That constraint is in the engine and no configuration can switch it off.
+| | |
+|---|---|
+| **Limit** | State what could actually be read and what could not, in real dates and counts. Every later claim is capped here. |
+| **Extract** | Find the threads that recur across more than one period and domain, before answering anything. |
+| **Diagnose** | One finding per entry, in the first sentence, specific enough to be impossible to paste into someone else's report. |
+| **Guide** | One or two actions, startable this week, in sentences a tired person understands. |
+| **Evidence** | Context, the strongest counter-case, then the sources. Placed after the answer on purpose. |
+| **Reduce** | Rank, keep ten, then write the one page from what survived. |
 
 ## What is in this repository
 
 | File | What it is |
 |---|---|
-| [`SKILL.md`](SKILL.md) | The engine. Six moves as an agent-executable skill (Claude, Codex and compatible runtimes), versioned, with a changelog. Carries no subject and no house voice. |
-| [`config.template/`](config.template/) | The three files you fill in once: your subject, your corpus, your voice. Copy to `config/`. |
-| [`GUIDE.md`](GUIDE.md) | The setup walkthrough, including how to point it at a corpus without handing anything over, and how to run the moves as separate passes. |
+| [`SKILL.md`](SKILL.md) | The engine. Six steps as an agent-executable skill (Claude, Codex and compatible runtimes), versioned. Carries no subject and no house voice. |
+| [`config.template/`](config.template/) | The three files you fill in once: subject, corpus, voice. |
+| [`GUIDE.md`](GUIDE.md) | Setup walkthrough, including how to prepare a large chat archive and how to run the steps as separate passes. |
 
-**How the split works:** the engine never contains your subject, your sources or your voice, and your `config/` never leaves your machine. You can pull engine updates forever without touching any of it, and contribute engine improvements without leaking it. Where the engine and your voice config disagree on wording, your config wins. Where they disagree on honesty, the engine wins.
+Where the engine and your voice config disagree on wording, your config wins. Where they disagree on honesty, the engine wins.
 
-**Person or company.** The same six moves read a founder or a business. What changes is the SUBJECT config: which domains count, and what the reader wants it for. A company's record is usually the better corpus, because more of it is written down.
+## The honest price
 
-## Running it
-
-Point your agent at `SKILL.md` with your `config/` next to it. The skill instructs the agent to run the six moves as separate passes with gates between them, never as a single prompt. The corpus stays where it is.
-
-The one thing that stays manual, and should: deciding which of the ten findings you are actually going to act on. The method ranks them. It does not get a vote.
+It cuts things you wanted, because ten means ten. It will sometimes be wrong, which is why every finding carries a confidence number and a counter-case rather than a confident tone. And the ranking is the last decision it gets to make: which of the ten you actually act on stays yours.
 
 ---
 
@@ -100,7 +97,7 @@ The one thing that stays manual, and should: deciding which of the ten findings 
 
 This method makes no novelty claim. Prompts that read a user's history and report patterns back have circulated widely since long-context models became common.
 
-The specific prompt that prompted this one was [kropdx/reflection-engine](https://github.com/kropdx/reflection-engine), which we ran end to end against our own archive in August 2026. Credit where it is due: the output changed three decisions for us the same day. It was also structurally frustrating in four ways, and those four complaints are the entire design brief here. Twenty-two findings where a reader acts on two. The action buried under the argument. The summary written first, with the evidence recruited to it afterwards. And no ranking, so the reader does the triage the method should have done.
+The specific prompt that prompted this one was [kropdx/reflection-engine](https://github.com/kropdx/reflection-engine), which we ran end to end against our own archive in August 2026. Credit where it is due: the output changed three decisions for us the same day. It was also frustrating in the four ways listed above, and those four complaints are the entire design brief here.
 
 That repository states no licence, so nothing from it has been copied: no text, no phrasing, and none of its questions. Its fixed question list is replaced here by a sweep of finding classes followed by a ranking, which is a different mechanism rather than a reworded one.
 
